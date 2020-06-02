@@ -1,11 +1,17 @@
 body {
   font-family: "Roboto", sans-serif;
-  color: #FFFFFF;
+  color: #ffffff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  line-height: 1.5;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
 
@@ -13,7 +19,8 @@ img {
   max-width: 100%;
 }
 
-ul, ol {
+ul,
+ol {
   margin: 0;
   padding: 0;
 }
@@ -24,6 +31,7 @@ li {
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
 a:hover {
@@ -36,12 +44,13 @@ button {
   padding: 0;
 }
 
-button:focus, input:focus {
+button:focus,
+input:focus {
   outline: none;
 }
 
 .title-line {
-  background-color: #C8A35F;
+  background-color: #c8a35f;
   width: 90px;
   height: 6px;
   margin-bottom: 40px;
@@ -55,7 +64,7 @@ h2 {
 }
 
 .header-contacts-wrapper {
-  background-color: #C8A35F;
+  background-color: #c8a35f;
 }
 
 .header-contacts {
@@ -96,7 +105,7 @@ h2 {
 }
 
 .header-contacts__lang ul li a:hover {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .header-contacts__lang ul .active {
@@ -104,7 +113,7 @@ h2 {
 }
 
 .header-contacts__tel a:hover {
-  color: #2F343A;
+  color: #2f343a;
 }
 
 .header-contacts__email {
@@ -112,11 +121,11 @@ h2 {
 }
 
 .header-contacts__email a:hover {
-  color: #2F343A;
+  color: #2f343a;
 }
 
 .header-nav-wrapper {
-  background-color: #2F343A;
+  background-color: #2f343a;
 }
 
 .header-nav {
@@ -132,7 +141,7 @@ h2 {
 }
 
 .header-nav__logo {
-  border-right: 1px solid #FFFFFF;
+  border-right: 1px solid #ffffff;
 }
 
 .header-nav__offices {
@@ -140,16 +149,20 @@ h2 {
 }
 
 .header-nav__offices img {
+  display: inline-block;
+  vertical-align: middle;
   margin-left: 10px;
 }
 
 .header-nav__offices span {
+  display: inline-block;
+  vertical-align: middle;
   margin-left: 10px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .header-nav__offices span:hover {
-  color: #C8A35F;
+  color: #c8a35f;
 }
 
 .header-nav__navbar {
@@ -172,11 +185,11 @@ h2 {
 }
 
 .header-nav__navbar ul a:hover {
-  color: #C8A35F;
+  color: #c8a35f;
 }
 
 .main-section-wrapper {
-  background: #2F343A url("../img/truck-header.jpg") center no-repeat;
+  background: #2f343a url("../img/truck-header.jpg") center no-repeat;
   -webkit-background-size: cover;
           background-size: cover;
 }
@@ -188,7 +201,7 @@ h2 {
 .main-section-wrapper .main-section-info {
   padding: 45px 70px;
   text-align: center;
-  border: 1px solid #C8A35F;
+  border: 1px solid #c8a35f;
 }
 
 .main-section-wrapper .main-section-info__title h1 {
@@ -211,7 +224,7 @@ h2 {
 }
 
 .transport-section-wrapper {
-  background-color: #393F47;
+  background-color: #393f47;
   position: relative;
   z-index: 1;
 }
@@ -254,11 +267,16 @@ h2 {
 .transport-section-wrapper .transport-section .row .transport-section-slider__info-button button {
   display: inline-block;
   padding: 18px 48px;
-  background-color: #C8A35F;
+  background-color: #c8a35f;
   font-size: 16px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-align: center;
+}
+
+.transport-section-wrapper .transport-section .row .transport-section-slider__info-button button:hover {
+  cursor: pointer;
+  color: #ffffff;
 }
 
 .transport-section-wrapper .transport-section .row .transport-section-slider__img {
@@ -287,18 +305,29 @@ h2 {
 
 .transport-section-wrapper .transport-section .row .transport-section-switcher button {
   display: inline-block;
+  vertical-align: middle;
   font-size: 16px;
   font-weight: bold;
   letter-spacing: 0.1em;
-  color: #C8A35F;
+  color: #c8a35f;
   text-transform: uppercase;
+  -webkit-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+.transport-section-wrapper .transport-section .row .transport-section-switcher button:hover {
+  cursor: pointer;
+  color: #ffffff;
 }
 
 .transport-section-wrapper .transport-section .row .transport-section-switcher button .arrow-right {
   margin-left: 30px;
+  vertical-align: middle;
 }
 
 .transport-section-wrapper .transport-section .row .transport-section-switcher button .arrow-left {
+  vertical-align: middle;
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
@@ -306,19 +335,19 @@ h2 {
 }
 
 .transport-section-wrapper::before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   width: 20%;
   height: 100%;
   left: 50%;
   margin-left: -10%;
-  background: #2F343A;
+  background: #2f343a;
   z-index: 0;
 }
 
 .services-section-wrapper {
-  background-color: #2F343A;
+  background-color: #2f343a;
 }
 
 .services-section-wrapper .services-section {
@@ -359,8 +388,8 @@ h2 {
           align-items: center;
   width: 25%;
   padding: 55px 42px 35px 42px;
-  background-color: #393F47;
-  border: 1px solid #2F343A;
+  background-color: #393f47;
+  border: 1px solid #2f343a;
   text-transform: uppercase;
   font-size: 18px;
   font-weight: bold;
@@ -377,8 +406,8 @@ h2 {
 }
 
 .services-section-wrapper .services-section__catalog a:hover {
-  background: #C8A35F;
-  color: #FFFFFF;
+  background: #c8a35f;
+  color: #ffffff;
 }
 
 .services-section-wrapper .services-section__catalog a:hover::before {
@@ -390,20 +419,20 @@ h2 {
 }
 
 .features-section-wrapper {
-  background-color: #2F343A;
+  background-color: #2f343a;
   position: relative;
   z-index: 1;
 }
 
 .features-section-wrapper::before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   width: 20%;
   height: 100%;
   left: 50%;
   margin-left: -10%;
-  background: #393F47;
+  background: #393f47;
   z-index: 0;
 }
 
@@ -459,7 +488,7 @@ h2 {
   padding: 23px 50px;
   background-color: #fff;
   color: #000;
-  border: 1px solid #C8A35F;
+  border: 1px solid #c8a35f;
   text-align: center;
 }
 
@@ -481,10 +510,10 @@ h2 {
 
 .features-section-wrapper .features-section .row .features-section-catalog__feature-img {
   width: 30%;
-  background: #2F343A url(../img/truck2.jpg) center no-repeat;
+  background: #2f343a url(../img/truck2.jpg) center no-repeat;
   -webkit-background-size: cover;
           background-size: cover;
-  border: 1px solid #C8A35F;
+  border: 1px solid #c8a35f;
 }
 
 .map-section {
@@ -492,7 +521,7 @@ h2 {
 }
 
 .footer-wrapper {
-  background-color: #C8A35F;
+  background-color: #c8a35f;
   padding: 60px 0;
 }
 
@@ -512,5 +541,5 @@ h2 {
 }
 
 .footer-wrapper .footer .row .footer-contacts a:hover {
-  color: #2F343A;
+  color: #2f343a;
 }

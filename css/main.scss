@@ -1,23 +1,29 @@
 // Mixins
-   @mixin font-fam {
-      font-family: "Roboto", sans-serif;
-   }
+@mixin font-fam {
+   font-family: "Roboto", sans-serif;
+}
 
 // Variables
-   $main-page-color: #2F343A;
-   $sec-page-color: #C8A35F;
-   $third-page-color: #393F47;
-   $main-text-color: #FFFFFF;
-   $sec-text-color: #C8A35F;
+$main-page-color: #2f343a;
+$sec-page-color: #c8a35f;
+$third-page-color: #393f47;
+$main-text-color: #ffffff;
+$sec-text-color: #c8a35f;
 
 // Common
 body {
    @include font-fam();
    color: $main-text-color;
    box-sizing: border-box;
+   line-height: 1.5;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
    margin: 0;
 }
 
@@ -25,7 +31,8 @@ img {
    max-width: 100%;
 }
 
-ul, ol {
+ul,
+ol {
    margin: 0;
    padding: 0;
 }
@@ -36,9 +43,10 @@ li {
 
 a {
    color: inherit;
+   text-decoration: none;
 }
-   
-a:hover{
+
+a:hover {
    text-decoration: none;
 }
 
@@ -48,7 +56,8 @@ button {
    padding: 0;
 }
 
-button:focus, input:focus {
+button:focus,
+input:focus {
    outline: none;
 }
 
@@ -68,7 +77,6 @@ h2 {
 
 // Header
 .header {
-
    &-contacts-wrapper {
       background-color: $sec-page-color;
    }
@@ -85,7 +93,6 @@ h2 {
       }
 
       &__lang {
-
          ul {
             display: flex;
 
@@ -112,7 +119,6 @@ h2 {
       }
 
       &__tel {
-         
          a:hover {
             color: $main-page-color;
          }
@@ -126,7 +132,7 @@ h2 {
          }
       }
    }
-   
+
    &-nav-wrapper {
       background-color: $main-page-color;
    }
@@ -147,10 +153,14 @@ h2 {
          margin: 0;
 
          img {
+            display: inline-block;
+            vertical-align: middle;
             margin-left: 10px;
          }
 
          span {
+            display: inline-block;
+            vertical-align: middle;
             margin-left: 10px;
             color: $main-text-color;
          }
@@ -183,7 +193,7 @@ h2 {
 .main-section-wrapper {
    background: $main-page-color url("../img/truck-header.jpg") center no-repeat;
    background-size: cover;
-   
+
    .main-section {
       padding: 150px 95px 50px 95px;
 
@@ -224,25 +234,19 @@ h2 {
       padding: 120px 0;
 
       .row {
-
          .owl-carousel__item {
             display: flex;
             justify-content: space-between;
             align-items: center;
          }
-   
-         .transport-section-slider {
 
+         .transport-section-slider {
             &__info {
                max-width: 50%;
-            
-               &-line {
 
-               }
-               
                &-title {
                   max-width: 440px;
-                  margin-bottom: 30px;               
+                  margin-bottom: 30px;
                }
 
                &-subtitle {
@@ -252,19 +256,23 @@ h2 {
                }
 
                &-button {
-
                   button {
-                  display: inline-block;
-                  padding: 18px 48px;
-                  background-color: $sec-page-color;
-                  font-size: 16px;
-                  letter-spacing: 0.1em;
-                  text-transform: uppercase;
-                  text-align: center;
+                     display: inline-block;
+                     padding: 18px 48px;
+                     background-color: $sec-page-color;
+                     font-size: 16px;
+                     letter-spacing: 0.1em;
+                     text-transform: uppercase;
+                     text-align: center;
+
+                     &:hover {
+                        cursor: pointer;
+                        color: $main-text-color;
+                     }
                   }
                }
             }
-            
+
             &__img {
                max-width: 50%;
             }
@@ -277,28 +285,37 @@ h2 {
             align-items: center;
 
             button {
-            display: inline-block;
-            font-size: 16px;
-            font-weight: bold;
-            letter-spacing: 0.1em;
-            color: $sec-text-color;
-            text-transform: uppercase;
+               display: inline-block;
+               vertical-align: middle;
+               font-size: 16px;
+               font-weight: bold;
+               letter-spacing: 0.1em;
+               color: $sec-text-color;
+               text-transform: uppercase;
+               transition: all 0.1s;
+
+               &:hover {
+                  cursor: pointer;
+                  color: $main-text-color;
+               }
 
                .arrow-right {
                   margin-left: 30px;
+                  vertical-align: middle;
                }
 
                .arrow-left {
+                  vertical-align: middle;
                   transform: rotate(180deg);
                   margin-right: 30px;
                }
             }
          }
       }
-   } 
+   }
 
    &::before {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       width: 20%;
@@ -307,7 +324,6 @@ h2 {
       margin-left: -10%;
       background: $main-page-color;
       z-index: 0;
-      
    }
 }
 
@@ -318,13 +334,11 @@ h2 {
    .services-section {
       padding: 120px 0;
 
-      &__line {}
-
       &__title {
          margin-bottom: 50px;
       }
 
-      &__catalog{
+      &__catalog {
          display: flex;
          flex-wrap: wrap;
 
@@ -362,7 +376,6 @@ h2 {
             width: 70px;
             top: 18%;
          }
-
       }
    }
 }
@@ -374,7 +387,7 @@ h2 {
    z-index: 1;
 
    &::before {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       width: 20%;
@@ -383,7 +396,6 @@ h2 {
       margin-left: -10%;
       background: $third-page-color;
       z-index: 0;
-      
    }
 
    .features-section {
@@ -391,15 +403,11 @@ h2 {
       padding: 80px 0;
 
       .row {
-   
          .features-section-info {
             max-width: 440px;
 
-            &__line {
-            }
-            
             &__title {
-               margin-bottom: 30px;               
+               margin-bottom: 30px;
             }
             &__text {
                font-size: 16px;
@@ -423,24 +431,25 @@ h2 {
                border: 1px solid $sec-page-color;
                text-align: center;
 
-               .feature-span-1{
+               .feature-span-1 {
                   font-size: 64px;
                   line-height: 75px;
                   font-weight: bold;
                   letter-spacing: 0.05em;
                }
-               .feature-span-2{
+               .feature-span-2 {
                   font-size: 18px;
                   letter-spacing: 0.05em;
                }
-               .feature-span-3{
+               .feature-span-3 {
                   font-size: 12px;
                }
             }
 
             &__feature-img {
                width: 30%;
-               background: $main-page-color url(../img/truck2.jpg) center no-repeat;
+               background: $main-page-color url(../img/truck2.jpg) center
+                  no-repeat;
                background-size: cover;
                border: 1px solid $sec-page-color;
             }
@@ -460,7 +469,6 @@ h2 {
    padding: 60px 0;
 
    .footer {
-
       .row {
          justify-content: space-between;
          align-items: center;
@@ -472,7 +480,6 @@ h2 {
                color: $main-page-color;
             }
          }
-
       }
    }
 }
