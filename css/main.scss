@@ -1,0 +1,478 @@
+// Mixins
+   @mixin font-fam {
+      font-family: "Roboto", sans-serif;
+   }
+
+// Variables
+   $main-page-color: #2F343A;
+   $sec-page-color: #C8A35F;
+   $third-page-color: #393F47;
+   $main-text-color: #FFFFFF;
+   $sec-text-color: #C8A35F;
+
+// Common
+body {
+   @include font-fam();
+   color: $main-text-color;
+   box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   margin: 0;
+}
+
+img {
+   max-width: 100%;
+}
+
+ul, ol {
+   margin: 0;
+   padding: 0;
+}
+
+li {
+   list-style: none;
+}
+
+a {
+   color: inherit;
+}
+   
+a:hover{
+   text-decoration: none;
+}
+
+button {
+   border: none;
+   background-color: transparent;
+   padding: 0;
+}
+
+button:focus, input:focus {
+   outline: none;
+}
+
+.title-line {
+   background-color: $sec-page-color;
+   width: 90px;
+   height: 6px;
+   margin-bottom: 40px;
+}
+
+h2 {
+   font-size: 40px;
+   font-weight: bold;
+   text-transform: uppercase;
+   letter-spacing: 0.05em;
+}
+
+// Header
+.header {
+
+   &-contacts-wrapper {
+      background-color: $sec-page-color;
+   }
+
+   &-contacts {
+      padding: 16px 0;
+      font-size: 12px;
+      line-height: 14px;
+      max-height: 45px;
+
+      .row {
+         justify-content: space-between;
+         align-items: center;
+      }
+
+      &__lang {
+
+         ul {
+            display: flex;
+
+            li {
+               opacity: 0.5;
+            }
+
+            li:hover {
+               opacity: 1;
+            }
+
+            li:not(:first-child) {
+               margin-left: 10px;
+            }
+
+            li a:hover {
+               color: $main-text-color;
+            }
+
+            .active {
+               opacity: 1;
+            }
+         }
+      }
+
+      &__tel {
+         
+         a:hover {
+            color: $main-page-color;
+         }
+      }
+
+      &__email {
+         text-align: right;
+
+         a:hover {
+            color: $main-page-color;
+         }
+      }
+   }
+   
+   &-nav-wrapper {
+      background-color: $main-page-color;
+   }
+
+   &-nav {
+      padding: 27px 0;
+      font-size: 14px;
+
+      .row {
+         align-items: center;
+      }
+
+      &__logo {
+         border-right: 1px solid $main-text-color;
+      }
+
+      &__offices {
+         margin: 0;
+
+         img {
+            margin-left: 10px;
+         }
+
+         span {
+            margin-left: 10px;
+            color: $main-text-color;
+         }
+
+         span:hover {
+            color: $sec-page-color;
+         }
+      }
+
+      &__navbar {
+         text-transform: uppercase;
+
+         ul {
+            display: flex;
+            justify-content: flex-end;
+
+            li:not(:first-child) {
+               margin-left: 30px;
+            }
+
+            a:hover {
+               color: $sec-page-color;
+            }
+         }
+      }
+   }
+}
+
+// Main section
+.main-section-wrapper {
+   background: $main-page-color url("../img/truck-header.jpg") center no-repeat;
+   background-size: cover;
+   
+   .main-section {
+      padding: 150px 95px 50px 95px;
+
+      &-info {
+         padding: 45px 70px;
+         text-align: center;
+         border: 1px solid $sec-page-color;
+
+         &__title h1 {
+            font-size: 64px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 45px;
+         }
+
+         &__subtitle {
+            font-size: 18px;
+            max-width: 780px;
+         }
+      }
+      &-mouse {
+         display: block;
+         margin-top: 140px;
+         text-align: center;
+      }
+   }
+}
+
+// transport Section
+.transport-section-wrapper {
+   background-color: $third-page-color;
+   position: relative;
+   z-index: 1;
+
+   .transport-section {
+      z-index: 2;
+      padding: 120px 0;
+
+      .row {
+
+         .owl-carousel__item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+         }
+   
+         .transport-section-slider {
+
+            &__info {
+               max-width: 50%;
+            
+               &-line {
+
+               }
+               
+               &-title {
+                  max-width: 440px;
+                  margin-bottom: 30px;               
+               }
+
+               &-subtitle {
+                  max-width: 440px;
+                  font-size: 18px;
+                  margin-bottom: 50px;
+               }
+
+               &-button {
+
+                  button {
+                  display: inline-block;
+                  padding: 18px 48px;
+                  background-color: $sec-page-color;
+                  font-size: 16px;
+                  letter-spacing: 0.1em;
+                  text-transform: uppercase;
+                  text-align: center;
+                  }
+               }
+            }
+            
+            &__img {
+               max-width: 50%;
+            }
+         }
+
+         .transport-section-switcher {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            button {
+            display: inline-block;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 0.1em;
+            color: $sec-text-color;
+            text-transform: uppercase;
+
+               .arrow-right {
+                  margin-left: 30px;
+               }
+
+               .arrow-left {
+                  transform: rotate(180deg);
+                  margin-right: 30px;
+               }
+            }
+         }
+      }
+   } 
+
+   &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 20%;
+      height: 100%;
+      left: 50%;
+      margin-left: -10%;
+      background: $main-page-color;
+      z-index: 0;
+      
+   }
+}
+
+// Services Section
+.services-section-wrapper {
+   background-color: $main-page-color;
+
+   .services-section {
+      padding: 120px 0;
+
+      &__line {}
+
+      &__title {
+         margin-bottom: 50px;
+      }
+
+      &__catalog{
+         display: flex;
+         flex-wrap: wrap;
+
+         a {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 25%;
+            padding: 55px 42px 35px 42px;
+            background-color: $third-page-color;
+            border: 1px solid $main-page-color;
+            text-transform: uppercase;
+            font-size: 18px;
+            font-weight: bold;
+            transition: all 0.3s;
+            position: relative;
+
+            img {
+               height: 30px;
+               width: 30px;
+               margin-bottom: 43px;
+            }
+         }
+
+         a:hover {
+            background: $sec-page-color;
+            color: $main-text-color;
+         }
+
+         a:hover::before {
+            position: absolute;
+            content: url(../img/airplane-black.svg);
+            height: 70px;
+            width: 70px;
+            top: 18%;
+         }
+
+      }
+   }
+}
+
+// Features Section
+.features-section-wrapper {
+   background-color: $main-page-color;
+   position: relative;
+   z-index: 1;
+
+   &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 20%;
+      height: 100%;
+      left: 50%;
+      margin-left: -10%;
+      background: $third-page-color;
+      z-index: 0;
+      
+   }
+
+   .features-section {
+      z-index: 2;
+      padding: 80px 0;
+
+      .row {
+   
+         .features-section-info {
+            max-width: 440px;
+
+            &__line {
+            }
+            
+            &__title {
+               margin-bottom: 30px;               
+            }
+            &__text {
+               font-size: 16px;
+            }
+         }
+
+         .features-section-catalog {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+
+            &__feature {
+               display: flex;
+               flex-direction: column;
+               justify-content: space-around;
+               align-items: center;
+               width: 30%;
+               padding: 23px 50px;
+               background-color: #fff;
+               color: #000;
+               border: 1px solid $sec-page-color;
+               text-align: center;
+
+               .feature-span-1{
+                  font-size: 64px;
+                  line-height: 75px;
+                  font-weight: bold;
+                  letter-spacing: 0.05em;
+               }
+               .feature-span-2{
+                  font-size: 18px;
+                  letter-spacing: 0.05em;
+               }
+               .feature-span-3{
+                  font-size: 12px;
+               }
+            }
+
+            &__feature-img {
+               width: 30%;
+               background: $main-page-color url(../img/truck2.jpg) center no-repeat;
+               background-size: cover;
+               border: 1px solid $sec-page-color;
+            }
+         }
+      }
+   }
+}
+
+// Map Section
+.map-section {
+   height: 500px;
+}
+
+// Footer
+.footer-wrapper {
+   background-color: $sec-page-color;
+   padding: 60px 0;
+
+   .footer {
+
+      .row {
+         justify-content: space-between;
+         align-items: center;
+
+         .footer-contacts {
+            text-align: right;
+
+            a:hover {
+               color: $main-page-color;
+            }
+         }
+
+      }
+   }
+}
